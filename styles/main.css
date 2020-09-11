@@ -1,0 +1,670 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+/*---------------------------------------------*/
+@font-face {
+  font-family: AvenirNext;
+  src: url("../fonts/AvenirNext-DemiBold.woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: AvenirNext;
+  src: url("../fonts/AvenirNext-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AvenirNext;
+  src: url("../fonts/AvenirNext-Bold.woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: AvenirNext;
+  src: url("../fonts/AvenirNext-Medium.woff");
+  font-weight: 600;
+}
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+/*----------------------------------------------*/
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 70px;
+  width: 400px;
+  font-family: AvenirNext;
+  color: #2c2a2e;
+}
+h2 {
+  font-weight: 600;
+  font-size: calc(1.25 * 2.5vw);
+  line-height: 70px;
+  width: 400px;
+  font-family: AvenirNext;
+  color: #2c2a2e;
+}
+h4 {
+  font-weight: 500;
+  line-height: 30px;
+  font-family: AvenirNext;
+  color: #2c2a2e;
+}
+p {
+  line-height: 30px;
+  width: 320px;
+  font-family: AvenirNext;
+  color: #2c2a2e;
+}
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+.button.is-primary {
+  background-color: #3040c4;
+  color: white;
+  font-family: AvenirNext;
+
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+}
+a {
+  color: #3d3d3d;
+  text-decoration: none;
+}
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+/*----------------------------------------------*/
+.container {
+  margin: 0 80px 0 80px;
+}
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+header .container {
+  padding: 20px 0 10px 0;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(238, 240, 252);
+}
+header .container .main-nav ul {
+  display: flex;
+  flex-direction: row;
+}
+header .container .main-nav li {
+  padding: 0 0 0 40px;
+
+  font-weight: 600;
+  font-family: AvenirNext;
+}
+header .burger.is-visible-mobile {
+  display: none;
+}
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+.hero .container {
+  flex-wrap: nowrap;
+  height: 550px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__desc {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+}
+.hero__desc p {
+  padding: 15px 0;
+}
+.hero__image img {
+  width: 800px;
+  height: 400px;
+}
+.hero .container .button.is-primary {
+  font-size: 17px;
+  height: 60px;
+  width: 210px;
+  line-height: 60px;
+  font-weight: 500;
+  text-align: center;
+}
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+.meetYourMatch {
+  margin: 0 0 13vw 0;
+}
+
+.meetYourMatch__background {
+  position: absolute;
+  background-color: #eef0fc;
+  z-index: -10;
+  height: 515px;
+  width: 1285px;
+  border-radius: 20px;
+}
+.meetYourMatchــcontent {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  width: 1280px;
+  top: 100px;
+}
+.meetYourMatchــcontent h2 {
+  text-align: center;
+}
+.switcher {
+  color: #cccc;
+  text-align: center;
+  flex-direction: row;
+  font-family: AvenirNext;
+}
+.switcher label input {
+  position: relative;
+  z-index: -1;
+  bottom: 25px;
+  left: 45px;
+}
+.switcher span {
+  position: relative;
+  padding: 0 0 0 20px;
+  bottom: 25px;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  width: 368px;
+  height: 55px;
+  z-index: 1;
+  font-size: 20px;
+  left: 10%;
+  padding-left: 50px;
+  outline: none;
+  background: url("../images/map-pin.png") no-repeat 1.3vw 17px;
+  background-color: white;
+  border: 1px solid #3040c4;
+  border-radius: 45px 0 0 45px;
+  position: relative;
+  font-family: AvenirNext;
+}
+.form-group button {
+  position: relative;
+  font-size: 17px;
+  width: 180px;
+  height: 59px;
+  z-index: 2;
+  bottom: 1px;
+  outline: none;
+}
+.form-group input::placeholder {
+  color: #303fc434;
+}
+
+.meetYourMatchــcontent form div {
+  height: 100px;
+}
+.widget__desc {
+  font-size: 15px;
+  margin: 0 20px 20px 20px;
+}
+.widgets.is-searchResults {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: space-around;
+}
+.widgets.is-searchResults .widget {
+  background-color: #ffffff;
+  box-shadow: 0 10px 80px 3px #eef0fc;
+  width: 230px;
+  height: 325px;
+}
+
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+.widgets.is-howItWorks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.widgets.is-howItWorks .widget {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 29.9vw;
+  max-width: 360px;
+}
+.widgets.is-howItWorks .widget__desc p {
+  color: #7d7e8a;
+}
+.widgets.is-howItWorks .widget__desc h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3d3d3d;
+  font-family: AvenirNext;
+}
+.howItWorks .container {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.howItWorks .container h2 {
+  text-align: center;
+  font-size: 40px;
+}
+.howItWorks .container div {
+  padding: 30px 0;
+}
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+.stories .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  margin: 0;
+  background-color: #f7f6fb;
+}
+
+.stories .container h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 40px;
+  font-family: AvenirNext;
+}
+.stories .container .heading-paragraph {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 15px;
+  width: 35%;
+}
+.stories .container .widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.stories .container .widgets .widget {
+  padding: 0 30px;
+  width: fit-content;
+}
+.stories .container .widgets .widget .widget__desc {
+  margin: 10px 0;
+}
+.stories .container .widgets .widget .widget__desc h3 {
+  padding: 10px 0;
+  font-family: AvenirNext;
+  font-size: 20px;
+}
+.stories .container .widgets .widget .widget__desc a {
+  color: #3f43e0;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: AvenirNext;
+}
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+.actions .container {
+  margin: 0;
+  padding: 100px 0;
+  grid-row: 2;
+  background-color: #3140c4;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+.actions .container a {
+    margin: 20px 10px;
+    font-family: AvenirNext;
+    line-height: 58px;
+    font-weight: 600;
+    font-size: 20px;
+    height: 60px;
+    border-radius: 30px;
+    width: 200px;
+    text-align: center;
+  }
+.actions .container h2 {
+  color: white;
+  width: 450px;
+  font-size: 35px;
+  text-align: center;
+  display: grid;
+  grid-column: 1 / 3;
+}
+.actions .container .button.is-outline {
+  color: white;
+  border: 1px solid white;
+}
+.actions .container .button.is-secondary {
+  color: #3140c4;
+  background-color: white;
+}
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+footer .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 100px 0;
+}
+footer .container .copyrights {
+  width: 22vw;
+}
+footer .container .footer-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+footer .container .footer-nav .item {
+  font-family: AvenirNext;
+  padding: 0 40px;
+}
+footer .container .footer-nav .item a {
+    font-size: 14px;
+    line-height: 30px;
+    color: #3d3d3d;
+  }
+footer .container .footer-nav .item h5 {
+  font-family: AvenirNext;
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+
+/* Tablet ( Ipad ) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .container {
+    border-bottom: none;
+  }
+  header .container .main-nav li {
+    padding: 0 0 0 20px;
+    font-size: 14px;
+    width: 95px;
+    height: 20px;
+  }
+  .hero .container {
+    align-items: center;
+  }
+  .hero .container .hero__desc {
+    width: 250px;
+  }
+  .hero .container h1 {
+    font-size: 31px;
+  }
+
+  .hero .container .hero__desc h1,p,a {
+    width: 250px;
+  }
+  .hero .container .hero__desc p {
+    font-size: 12px;
+  }
+  .hero .container .hero__desc .button.is-primary {
+    width: 150px;
+  }
+  .meetYourMatchــcontent {
+    width: 608px;
+    top: 50px;
+  }
+  .meetYourMatch__background {
+    width: 608px;
+    height: 400px;
+  }
+  
+  .hero__image img {
+    width: 400px;
+    height: 200px;
+  }
+  .howItWorks .container h2 {
+    padding: 0 0 30px 0;
+  }
+  .meetYourMatchــcontent .widgets.is-searchResults .widget {
+    margin: 0 0 30px 0;
+  }
+  .meetYourMatchــcontent .form-group input {
+    width: 200px;
+  }
+  .stories .container .widgets {
+    width: 720px;
+    justify-content: left;
+  }
+  .howItWorks .container .widgets {
+    height: 1200px;
+    width: 300px;
+  }
+  .stories .container .widgets .widget .widget__image img {
+    width: 300px;
+  }
+  .actions .container {
+    padding: 50px 0;
+  }
+  .actions .container a {
+    line-height: 52px;
+    height: 50px;
+    width: 150px;
+  }
+  .actions .container h2 {
+    font-size: 27px;
+    width: 350px;
+  }
+  
+  footer .container {
+    padding: 50px 0;
+  }
+ 
+  footer .container .footer-nav a {
+    font-size: 10px;
+  }
+  footer .container .footer-nav h5 {
+    font-size: 12px;
+  }
+  footer .container .footer-nav .item {
+    padding: 0 15px;
+  }
+}
+/* iPhone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    margin: 0 20px;
+  }
+  header .burger.is-visible-mobile {
+    display: block;
+    background-color: white;
+    border: none;
+  }
+  header .burger.is-visible-mobile div {
+    background-color: #3d3d3d;
+    margin: 2.5px 0;
+    height: 2.5px;
+    width: 25px;
+  }
+  header .container .main-nav {
+    display: none;
+    border-bottom: none;
+  }
+  header .container {
+    width: 90vw;
+  }
+  .hero .container {
+    padding: 40px 0 0 0;
+    margin: 0;
+    flex-wrap: wrap;
+    height: fit-content;
+  
+  }
+  .hero .container p {
+    width: fit-content;
+  }
+  .hero .hero__desc {
+    margin: 0 20px;
+  }
+  .hero .hero__image img {
+    width: 100vw;
+    height: 50vw;
+  }
+  .hero .hero__desc h1 {
+    width: fit-content;
+  }
+  .meetYourMatch .container {
+    margin: 0;
+  }
+  .meetYourMatchــcontent {
+    width: 100vw;
+  }
+  .meetYourMatchــcontent h2 {
+    width: fit-content;
+    font-size: 30px;
+  }
+  .meetYourMatch .container .meetYourMatch__background {
+    width: 100vw;
+  }
+  .meetYourMatchــcontent .form-group {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .meetYourMatchــcontent .form-group input {
+    left: 30px;
+    width: 170px;
+  }
+  .meetYourMatchــcontent .form-group input::placeholder {
+    padding: 0;
+    font-size: 14px;
+  }
+  .meetYourMatch .form-group button {
+    width: 120px;
+    position: relative;
+    top: 0.03vw;
+    right: 30px;
+  }
+  .meetYourMatchــcontent .widgets.is-searchResults .widget {
+    margin: 0 0 30px 0;
+  }
+  .meetYourMatchــcontent .widgets.is-searchResults .widget .widget__desc p {
+    width: fit-content;
+  }
+  .howItWorks .container h2 {
+    width: fit-content;
+  }
+  .howItWorks .container .widgets.is-howItWorks .widget {
+    max-height: fit-content;
+  }
+ 
+  .howItWorks .container .widgets.is-howItWorks .widget p {
+    width: fit-content;
+  }
+  .howItWorks .container .widgets.is-howItWorks .widget h3 {
+    width: 80vw;
+  }
+  .stories .container .widgets .widget .widget__image img {
+    width: 80vw;
+  }
+  .stories .container .widgets .widget {
+    padding: 0 0 15px 0;
+    width: 80vw;
+  }
+  .stories .container h2 {
+    font-size: 30px;
+    width: fit-content;
+  }
+  .stories .container .heading-paragraph {
+    margin: 0 10px;
+    font-size: 13px;
+    width: fit-content;
+  }
+  .actions .container {
+    padding: 10px 0;
+  }
+  .actions .container a {
+    font-size: 13px;
+    width: 40vw;
+    line-height: 40px;
+    height: 40px;
+  }
+  .actions .container h2 {
+    font-size: 15px;
+    width: 95vw;
+  }
+
+  footer .container {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    padding: 0 30px;
+  }
+  footer .container .footer-nav {
+    justify-content: space-between;
+  }
+  footer .container .footer-nav .item a {
+    font-size: 12px;
+  }
+  footer .container .footer-nav .item {
+    width: 30vw;
+    padding: 0 0 30px 0;
+  }
+  footer .container .copyrights {
+    width: 50vw;
+    padding: 30px 0;
+  }
+  footer .container .copyrights p {
+    font-size: 10px;
+    width: fit-content;
+  }
+ 
+  
+}

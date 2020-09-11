@@ -1,0 +1,54 @@
+/*----------------------١-----------------------*/
+/*                 CSS Reset                    */
+/*
+يجب عليك وضع محتويات الـ 
+CSS Reset
+ هنا وليس أي نمط متعلق بالموقع، بل الأنماط التي تريد بها إعادة ضبط أنماط المتصفح
+ إفتح هذه المقالة
+ https://meyerweb.com/eric/tools/css/reset/
+*/
+/**/
+* {
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+body {
+  line-height: 1;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
